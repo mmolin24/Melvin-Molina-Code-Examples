@@ -1,0 +1,128 @@
+<!-- Melvin Molina CMSC389N Exercise 1-->
+<!doctype html>
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise 1</title>
+</head>
+
+<body> 
+
+    <script>
+        
+        var body = document.body;
+        var tbl = document.createElement("table");
+        tbl.setAttribute("border", "10px");
+
+        var tle = document.createElement("caption");
+        tle.innerHTML = "<b>Cubed Root Table</b>";
+        tbl.appendChild(tle);
+
+        // table body gets added to the table
+        var tblBody = document.createElement("TBody");
+        tbl.appendChild(tblBody);
+
+        
+        // adds header to then add TH to 
+        var header = document.createElement("TR");
+
+        var count = document.createElement("TH");
+        count.innerHTML = "Count";
+        count.setAttribute("align", "middle");
+        header.appendChild(count);
+
+
+        var value = document.createElement("TH");
+        value.innerHTML = "Value";
+        header.appendChild(value);
+        
+
+        var cubedVal = document.createElement("TH");
+        cubedVal.innerHTML = "Cubed Value";
+        header.appendChild(cubedVal);
+
+
+        tblBody.appendChild(header);
+
+
+        function showTable(){
+        body.appendChild(tbl);
+        }
+
+
+        var num;
+        var counter = 0;
+        var sum = 0;
+
+        do{
+            num = prompt("Enter a value or 'done':");
+
+            if ((isNaN(num) || hasWhiteSpace(num)) && !num.toString().match(/done/i) && !num.toString().match(/cancel/i)){
+                alert("You did not provide a number!");
+            }else if(!isNaN(num) && !num.toString().match(/cancel/i) ){
+                num = Math.round(num);
+                counter = counter+1;
+                addRow();
+                sum = sum + num;
+            }
+        }while(!num.toString().match(/done/i) && !num.toString().match(/cancel/i))
+
+        if(num.toString().match(/done/i)){
+            show();
+        }
+
+        function addRow(){
+
+            var row = document.createElement("TR");
+
+            // creates value for countcell and adds it to the row
+            var countCell = document.createElement("TD");
+            countCell.innerHTML = counter;
+            row.appendChild(countCell);
+
+            //creates value for the value itself and adds to row
+            var valCell = document.createElement("TD");
+            valCell.innerHTML = num;
+            row.appendChild(valCell);
+
+
+            //creates value for the cubed section and adds to row
+            var cubeCell = document.createElement("TD");
+            cubeCell.innerHTML = Math.pow(num,3);
+            row.appendChild(cubeCell);
+
+
+            tblBody.appendChild(row);
+
+        }
+
+       function show(){
+        var lastRow = document.createElement("TR");
+
+        var sumVal = document.createElement("TD");
+        sumVal.innerHTML = "the sum of all values entered";
+        lastRow.appendChild(sumVal);
+
+        var showSum = document.createElement("TD");
+        showSum.innerHTML = sum;
+        lastRow.appendChild(showSum);
+
+        var clear = document.createElement("TD");
+        lastRow.appendChild(clear);
+
+        tblBody.appendChild(lastRow);
+        showTable();
+       }
+
+       function hasWhiteSpace(s) {
+            return /\s/g.test(s);
+        }
+
+        "use strict";
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/*  
+    Hint: 
+    
+    Study the sizing units for the elements and positioning also. 
+    For the dynamic resizing, "vw" would be useful, 
+    but blind-use won't help. 
+
+*/
+
+
+h1{
+
+    border: 2px;
+    text-align: center;
+    padding: 10px;
+    font-style: ;
+}
+body{
+    /* background body */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#header {
+    /* this is for the title */
+    color: white;
+    font-size: 5vw;
+    vertical-align: middle;
+    display: table-cell;
+    white-space: nowrap;
+    text-align: center;
+    font-family: "Poiret One";
+}
+
+#top_part {
+    /* this is the background */
+    background-color: darkcyan;
+    height: 15vw;
+    width: 85%;
+    padding: 5vw;
+    margin: 2vw;
+    position: relative;
+    display: table;
+}
+
+#profile_picture {
+    /* actual picture */
+    border-radius: 100%;
+    width: 10vw;
+}
+
+#name_capt {
+    /* name caption */
+    font-size: 1.85vw;
+    font-style: italic;
+    color: black;
+    width: 10vw;
+    white-space: nowrap;
+    font-family: "Sansita Swashed";
+}
+
+#profile_table {
+    /* table including name and pfp */
+    position: absolute;
+    float: left;
+    display: table-cell;
+    border-radius: 1vw;
+    left: 8vw;
+    top: 20vw;
+}
+
+#logos {
+    /* logo table */
+    position: absolute;
+    right: 10vw;
+    top: 20vw;
+}
+
+#icons {
+    /* change icon size */
+    font-size: 3vw;
+}
+
+#project_div {
+    /* entire bottom side div */
+    position: relative;
+    top: 7.5vw;
+    font-size: 1.5vw;
+    white-space: nowrap;
+    border-spacing: 1vw;
+    margin-bottom: 5vw;
+    display: table;
+}
+
+#numbers {
+    /* number of project */
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 2vw;
+}
+
+#project_names {
+    /* name of project */
+    position: absolute;
+    left: 6.5vw;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#project_disc {
+    /* paragraph itself*/
+    position: relative;
+    left: 6.5vw;
+    margin-right: 10vw;
+}
+
+#link {
+    /* hyperlink */
+    font-style: italic;
+    position: relative;
+    top: 2vw;
+    left: 5.5vw;
+}
+
+#project_picture {
+    /* picture of the project */
+    position: relative;
+    height: 25vw;
+    width: 20vw;
+    right: 2vw;
+    vertical-align: top;
+}
+
+#project_info {
+    /* table containing the paragraph and picture */
+    position: relative;
+    top: 1vw;
+    height: 34vw;
+    left: -1;
+}
+
+#project_cell {
+    /* cell containing the paragraph */
+    position: relative;
+    vertical-align: top;
+    white-space: pre-line;
+    width: 85%;
+    top: -1vw;
+    height: 25vw;
+    left: -1vw;
+}
+
+#entire_projects {
+    /* Organize the project tables to add it as rows */
+    display: table-row-group;
+    position: absolute;
+}
