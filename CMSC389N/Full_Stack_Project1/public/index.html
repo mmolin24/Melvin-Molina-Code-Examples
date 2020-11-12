@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Research Institute</title>
+    <link rel="stylesheet" href="./css/researchForm.css" />
+    <script src="./js/researchFormValidation.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Research Form</h1>
+    </header>
+
+    <section>
+
+        <!-- your form here! -->
+        <form method="POST" action="/processForm" id="form" onsubmit="return validateForm()">
+            <fieldset id="general">
+                <legend id="gen">General Information</legend>
+                <label for="firstname">Firstname:</label>
+                <input type="text" id="firstname" name="firstname" required>
+                <label for="lastname">Lastname:</label>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+                <label for="phoneFirstPart">Phone:</label><input type="text" required id="phoneFirstPart" maxlength="3"
+                    size="3" name="phoneFirstPart"> - <input type="text" required id="phoneSecondPart" maxlength="3"
+                    size="3" name="phoneSecondPart"> -
+                <input type="text" required id="phoneThirdPart" maxlength="4" size="4" name="phoneThirdPart">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </fieldset>
+
+            <fieldset id="research">
+                <legend id="ital">Research Study Data</legend>
+                <!-- This begins the fieldset with all the Metrics-->
+                <div id="ital">
+                <fieldset id="metrics">
+                    <legend id="regular">Age/Height/Weight</legend>
+                    <!-- This is the input for Age-->
+                    <label for="age" id="ageTxt">Age:</label>
+                    <input type="number" id="age" name="age" max="125" min="1" size="3">
+                    <!-- This is the input for Height-->
+                    <label for="height" id="heightTxt">Height:</label>
+                    <input type="number" id="heightFeet" name="heightFeet" max="7" min="2" size="1"> Feet
+                    <!-- This is the input for Inches-->
+                    <input type="number" id="heightInches" name="heightInches" min="0" max="11" size="2"> Inches
+                    <!-- This is the input for Weight-->
+                    <label for="weight" id="weightTxt">Weight:</label>
+                    <input type="number" id="weight" name="weight" min="1" max="600">
+                    Pounds
+                </fieldset>
+                </div>
+                <!-- This begins the fieldset with conditions-->
+                <fieldset id="conds">
+                    <legend>Conditions</legend>
+                    <!-- This is the input for Condition checkboxes-->
+                    <label for="Conditions">Which of the following conditions are present in your family? (Check all
+                        that apply)<br></label>
+                    <input type="checkbox" value="HighBloodPressure" id="highBloodPressure" name="highBloodPressure">High Blood Pressure
+                    <input type="checkbox" value="Diabetes" id="diabetes" name="diabetes">Diabetes
+                    <input type="checkbox" value="Glaucoma" id="glaucoma" name="glaucoma">Glaucoma
+                    <input type="checkbox" value="Asthma" id="asthma" name="asthma">Asthma
+                    <input type="checkbox" value="None" id="none" name="none">None
+                </fieldset>
+
+                <!-- This begins the fieldset with Time Period-->
+                <fieldset id="time">
+                    <legend>Time Period</legend>
+                    <!-- This is the input for Time Period radio-->
+                    <label for="period">Time Period</label>
+                    How long have you experienced any of the above conditions?<br>
+                    <input type="radio" id="never" name="period"><label for="never">Never</label>
+                    <input type="radio" id="lessThan" name="period"><label for="lessThan">Less than a
+                        year</label>
+                    <input type="radio" id="oneTwo" name="period"><label for="oneTwo">One to two
+                        years</label>
+                    <input type="radio" id="moreThan" name="period"><label for="moreThan">More than two years</label>
+                </fieldset>
+
+                <!-- This begins the fieldset with Study Information-->
+                <fieldset id="studyinfo">
+                    <legend>Study Information</legend>
+                    <!-- This is the input for select which Study-->
+                    <label for="type of study">Which study are you taking part of? </label>
+                    <select name="studyType" id="studyType">
+                        <option value="ShortTerm">
+                            Short Term
+                        </option>
+                        <option selected value="LongTerm">
+                            Long Term
+                        </option>
+                    </select>
+                    <!-- This is the input for Study ID-->
+                    <label for="Study Id"></label>Assigned Study Id:</label>
+                    <input type="text" name="firstFourDigits" id="firstFourDigits" placeholder="A777" required
+                        size="4"> - <input type="text" id="secondFourDigits" name="secondFourDigits" placeholder="B888"
+                        required size="4">
+                </fieldset>
+
+                <!-- This begins the fieldset with Additional comment box-->
+                <fieldset id="additional">
+                    <legend>Additional Information (Comments)</legend>
+
+                    <textarea rows="6" cols="100" name="comments"></textarea>
+
+                </fieldset>
+
+            </fieldset>
+
+            <!-- This begins the fieldset with the Buttons-->
+            <fieldset>
+                <button name="Clear Form" onclick="clearForm()">Clear Form</button>
+                <input type="submit" value="Submit Information">
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        CMSC Research Institute &reg;
+    </footer>
+</body>
+
+</html>

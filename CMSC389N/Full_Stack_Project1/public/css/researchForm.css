@@ -1,0 +1,59 @@
+/* place your css rules here */
+
+legend{
+    color: #A0522D;
+}
+
+#gen{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#ageTxt{
+    font-weight: bold;
+}
+
+#heightTxt{
+    font-weight: bold;
+}
+
+#weightTxt{
+    font-weight: bold;
+}
+
+#age{
+    width: 40px;
+    margin-right: 30px;
+}
+
+#weightTxt{
+    margin-left: 30px;
+}
+
+#studyType{
+    margin-right: 15px;
+}
+
+#firstFourDigits{
+    margin-left: 5px;
+}
+
+#ital{
+    font-style: italic;
+}
+
+#regular{
+    font-style: normal;
+}
+
+#phoneFirstPart{
+    width: 30px;
+}
+
+#phoneSecondPart{
+    width: 30px;
+}
+
+#phoneThirdPart{
+    width: 40px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+	<meta charset="UTF-8" />
+    <title><%= title %><</title>	
+    <link rel='stylesheet' href='./css/researchForm.css' />
+	</head>
+  <body>
+    <h3>Information Provided:</h3>
+	  <p>
+      <em>FirstName: <%= firstName %></em><br />
+      <em>LastName: <%= lastName %></em> <br />
+      <em>Phone Number:</em><%= phoneFirstPart %>-<%= phoneSecondPart %>-<%= phoneThirdPart %><br />
+      <em>Email:</em> <%= email %><br />
+      <em>Age:</em> <%= age %><br />
+      <em>Height:</em> <%= heightFeet %>'&nbsp;<%= heightInches %>"<br />
+      <em>Weight:</em> <%= weight %><br />
+      <em>Conditions:</em> <br />
+      <% if (highBloodPressure) { %>
+        <%= highBloodPressure %><br />
+      <% } %>
+      <% if (diabetes) { %>
+        <%= diabetes %><br />
+      <% } %>
+      <% if (glaucoma) { %>
+        <%= glaucoma %><br />
+      <% } %>
+      <% if (asthma) { %>
+        <%= asthma %><br />
+      <% } %>
+      <% if (none) { %>
+        <%= none %><br />
+      <% } %>
+      
+      <em>Time Period:</em> <%= period %><br />
+      <em>Study Type:</em> <%= studyType %><br />
+      <em>Study Id:</em> <%= firstFourDigits %>-<%= secondFourDigits %><br />
+      <em>Comments:</em> <%= comments %><br />		
+	  </p>
+	  <p>
+		  Data has been entered in the database.
+	  </p>
+  </body>
+</html>
